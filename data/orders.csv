@@ -1,0 +1,6 @@
+Customers' Name,Customers' Address,Customers' Phone Number,Courier,Status,Items
+Jack Sparrow,123 PIRATES BAY,12345678901,1,Preparing,"[1, 2, 3]"
+Wreck It Ralph,404 ERROR DESTROY GAME WORLD,23457685098,6,Preparing,"[5, 3]"
+Fix It Felix,1800 FIX IT LANE,01982765673,4,Preparing,[3]
+Ariel Triton,407 UNDER THE SEA,38765492031,6,Preparing,"[1, 2]"
+Delete This Example,GOING TO BE DELETED LANE,55566677788,4,Preparing,"[1, 2, 3, 5]"
