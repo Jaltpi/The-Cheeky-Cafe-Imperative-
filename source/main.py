@@ -1,6 +1,5 @@
 from the_handlers.module import save_to_csv_dict, read_from_csv_dict # CSV Functions
-from os import system
-from time import sleep
+from the_handlers.module import clear_screen_timer
 from db.database import show_products_table, delete_product, update_product, insert_product # Database (products)
 from db.database import show_couriers_table, delete_courier, update_courier, insert_courier # Database (couriers)
 from the_handlers.module import main_menu, products_menu, couriers_menu, orders_menu # Menu options
@@ -18,6 +17,7 @@ application_on = True
 
 while application_on:
 
+
     main_menu()
 
     main_menu_choice = input("What would you like todo? Please enter a number listed above or type 'Exit' to quit: ").title()
@@ -27,9 +27,9 @@ while application_on:
         save_to_csv_dict("data/orders.csv", orders)
         application_on = False
         exit_app = input("Thank you for using our app! Enter any button to exit: ")
+        clear_screen_timer()
         exit()
-        sleep(5)
-        system("clear")
+        
 
     elif main_menu_choice == "1":
         products_menu_on = True
