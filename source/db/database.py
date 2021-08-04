@@ -29,6 +29,7 @@ connection.close()
 
 # Products Table CRUD
 def show_products_table() -> list:
+    """This function shows all the items within the products table and returns the items as a list of tuples."""
     #Connect to database
     connection = sqlite3.connect("restaurant.db")
     # Create a cursor
@@ -45,6 +46,8 @@ def show_products_table() -> list:
     return items
 
 def insert_product(name: str, price: float):
+    """This function allows the user to insert a new item (product name and product price)
+    into the products table. """
     #Connect to database
     connection = sqlite3.connect("restaurant.db")
     # Create a cursor
@@ -64,6 +67,8 @@ def insert_product(name: str, price: float):
     
 
 def update_product(index: int, name: str, price: float):
+    """This function allows user input to select with product item they would like to update 
+    (product name and product price), then change the values with their preferred input."""
     #Connect to database
     connection = sqlite3.connect("restaurant.db")
     # Create a cursor
@@ -94,6 +99,7 @@ def update_product(index: int, name: str, price: float):
         connection.close()
 
 def delete_product(index: str):
+    """This function allows to user to select which item from the products table they would like to delete."""
     #Connect to database
     connection = sqlite3.connect("restaurant.db")
     # Create a cursor
@@ -113,7 +119,7 @@ def delete_product(index: str):
             connection.commit()
             print("You've successfully deleted a product.")
     except Exception as e:
-        print("Error: {e}. A non valid input was detected. Please try again.")
+        print(f"Error: {e}. A non valid input was detected. Please try again.")
     else:
         print("\n")
         print(CLOSING)
@@ -124,6 +130,8 @@ def delete_product(index: str):
 
 # Couriers Table CRUD
 def show_couriers_table() -> list:
+    """This function allows the user to view all the items within the couriers table. It returns a list 
+    tuples containing all the items."""
     #Connect to database
     connection = sqlite3.connect("restaurant.db")
     # Create a cursor
@@ -140,6 +148,8 @@ def show_couriers_table() -> list:
     return items
 
 def insert_courier(name: str, number: str):
+    """This function allows the user to insert a new item into the couriers table 
+    (courier name and courier phone number)."""
     #Connect to database
     connection = sqlite3.connect("restaurant.db")
     # Create a cursor
@@ -160,6 +170,8 @@ def insert_courier(name: str, number: str):
     
 
 def update_courier(index: int, name: str, number: str):
+    """This function allows the user to select an item from the couriers table, and update the values
+    of the couriers name and couriers phone number."""
     #Connect to database
     connection = sqlite3.connect("restaurant.db")
     # Create a cursor
@@ -191,6 +203,7 @@ def update_courier(index: int, name: str, number: str):
         connection.close()
 
 def delete_courier(index: str):
+    """This function allow the user to select an item from the couriers table to delete."""
     #Connect to database
     connection = sqlite3.connect("restaurant.db")
     # Create a cursor
