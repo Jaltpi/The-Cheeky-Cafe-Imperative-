@@ -2,7 +2,8 @@
 from db.database import show_couriers_table
 from the_handlers.logos import main_menu_logo,couriers_menu_logo,products_menu_logo,orders_menu_logo
 import csv
-
+import os
+import time 
 #########################################################################
 #TODO
 # Create csv file for orders
@@ -11,6 +12,12 @@ import csv
 # Push/commit everything to github
 
 ##########################################################################
+
+    
+def clear_screen_timer():
+    """This function gives a timer of 3 seconds after the user ends the app before it clears the screen."""
+    time.sleep(3)
+    os.system("cls")
 
 # Menu Options 
 def main_menu():
@@ -314,4 +321,3 @@ def read_from_csv_dict(file_path: str):
         reader = csv.DictReader(input_file)
         variable= [item for item in reader]
         return variable
-        
