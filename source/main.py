@@ -36,9 +36,9 @@ while application_on:
         while products_menu_on:
             products_menu()
         
-            products_menu_choice = input("Please enter a number listed above or type 'Exit' to quit: ")
+            products_menu_choice = input("Please enter a number listed above or type 'Exit' to quit: ").title()
         
-            if products_menu_choice == "0":
+            if products_menu_choice == "0" or products_menu_choice == "Exit":
                 # return to main menu
                 print("Returning to main menu.")
                 products_menu_on = False
@@ -113,9 +113,9 @@ while application_on:
         while orders_menu_on:
             orders_menu()
             
-            orders_menu_choice = input("Please enter a number listed above, or type 'Exit' to quit: ")
+            orders_menu_choice = input("Please enter a number listed above, or type 'Exit' to quit: ").title()
             
-            if orders_menu_choice == "0":
+            if orders_menu_choice == "0" or orders_menu_choice == "Exit":
                 #return main menu
                 print("Returning to main menu")
                 orders_menu_on = False
